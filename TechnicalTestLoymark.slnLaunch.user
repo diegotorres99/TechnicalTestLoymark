@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "TechnicalTestLoymark\\front_end.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "back-end\\back_end.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
