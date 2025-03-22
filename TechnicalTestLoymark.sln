@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "front_end", "TechnicalTestLoymark\front_end.csproj", "{4EE61FE2-E3F2-4134-A536-A2F4B3B37630}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{D921415E-DD12-4779-BACF-5ABCEF8609C7}"
+	ProjectSection(SolutionItems) = preProject
+		script_db_users.sql = script_db_users.sql
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "back_end", "back-end\back_end.csproj", "{36994D75-1B8E-4937-8767-54AD3A543652}"
 EndProject
