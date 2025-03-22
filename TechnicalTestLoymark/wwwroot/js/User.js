@@ -7,17 +7,16 @@ const userModel = {
     name: "",
     lastName: "",
     email: "",
-    birthDate: "",
+    birthDate: new Date(),
     phone: "",
     country: "",
     contactQuestion: false
 };
 
-$(document).ready(() => {
+$(function () {
     getUsers();
     populateCountries();
 });
-
 function getUsers() {
     fetch(uri + "getUsers")
         .then(response => response.ok ? response.json() : Promise.reject(response))
@@ -61,7 +60,8 @@ function populateCountries(countryString) {
                 countries.forEach(country => {
                     const option = new Option(country.name, country.code);
                     cbxPais.append(option);
-                    if (countryCode && country.code === countryCode) {
+
+                    if (country.id === 1) { 
                         option.selected = true;
                     }
                 });
@@ -74,18 +74,14 @@ function populateCountries(countryString) {
         });
 }
 function ShowModal(model) {
-    console.log('Received model')
-    console.log(model)
     $("#txtId").val(model.id || 0);
     $("#txtNombre").val(model.name || "");
     $("#txtApellido").val(model.lastName || "");
     $("#txtCorreo").val(model.email || "");
-    $("#txtFechaNacimiento").val(model.birthDate || "");
+    $("#txtFechaNacimiento").val(model.birthDate ? new Date(model.birthDate).toISOString().split("T")[0] : "");
     $("#txtTelefono").val(model.phone || "");
-    userModel.country = model.country     
-    $("#cbxPais").val(model.country || "Costa Rica");
-    $("#cbxRecibirInfo").val(model.contactQuestion ? "true" : "false");
 
+    $("#cbxPais").val(model.country || "Costa Rica");
     $('.modal').modal("show");
 }
 function clearFields() {
@@ -93,27 +89,6 @@ function clearFields() {
     $("#cbxPais").val("Costa Rica");
     $("#cbxRecibirInfo").val("false");
 }
-
-$("#btnSave").on("click", function () {
-    if (!validateFields()) return;
-
-    let user = {
-        id: $("#txtId").val(),
-        firstName: $("#txtNombre").val(),
-        lastName: $("#txtApellido").val(),
-        email: $("#txtCorreo").val(),
-        birthDate: $("#txtFechaNacimiento").val(),
-        phone: $("#txtTelefono").val(),
-        country: $("#cbxPais").val(),
-        receiveInfo: $("#cbxRecibirInfo").val() === "true"
-    };
-
-    if (isEditing) {
-        updateUser(user);
-    } else {
-        createUser(user);
-    }
-});
 function createUser() {
     if (!validateFields()) {
         return;
@@ -157,19 +132,43 @@ function createUser() {
         });
 }
 function updateUser(user) {
-    fetch(uri + 'Update', {
+    fetch(uri + 'UpdateUser', {
         method: "PUT",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(user)
     })
-        .then(response => response.ok ? response.json() : Promise.reject(response))
-        .then(data => {
-            alert("Usuario actualizado correctamente!");
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                return Promise.reject(response);
+            }
+        })
+        .then(message => {
+            alert(message || "Usuario actualizado correctamente!");
             $('.modal').modal("hide");
             clearFields();
             getUsers();
         })
         .catch(error => alert("Error al actualizar usuario."));
+}
+function validateFields() {
+    if ($("#txtNombre").val().trim() === "") {
+        alert("El nombre es obligatorio.");
+        $("#txtNombre").trigger("focus");
+        return false;
+    }
+    if ($("#txtApellido").val().trim() === "") {
+        alert("El apellido es obligatorio.");
+        $("#txtApellido").trigger("focus");
+        return false;
+    }
+    if ($("#txtCorreo").val().trim() === "") {
+        alert("El correo electrónico es obligatorio.");
+        $("#txtCorreo").trigger("focus");
+        return false;
+    }
+    return true;
 }
 
 $("#tbList tbody").on("click", ".btn-delete", function () {
@@ -193,7 +192,7 @@ $("#tbList tbody").on("click", ".btn-delete", function () {
     }
 });
 
-$("#btnNew").click(() => {
+$("#btnNew").on("click", function () {
     isEditing = false;
     clearFields();
     ShowModal(userModel);
@@ -204,21 +203,25 @@ $("#tbList tbody").on("click", ".btn-edit", function () {
     currentItem = $(this).data("model");
     ShowModal(currentItem);
 });
-function validateFields() {
-    if ($("#txtNombre").val().trim() === "") {
-        alert("El nombre es obligatorio.");
-        $("#txtNombre").trigger("focus");
-        return false;
+
+$("#btnSave").on("click", function () {
+    if (!validateFields()) return;
+
+    let user = {
+        id: $("#txtId").val(),
+        name: $("#txtNombre").val(),
+        lastName: $("#txtApellido").val(),
+        email: $("#txtCorreo").val(),
+        birthDate: $("#txtFechaNacimiento").val(),
+        phone: $("#txtTelefono").val(),
+        country: $("#cbxPais").val(),
+        contactQuestion: $("#cbxRecibirInfo").val() === "true"
+    };
+
+    if (isEditing) {
+        updateUser(user);
+    } else {
+        createUser(user);
     }
-    if ($("#txtApellido").val().trim() === "") {
-        alert("El apellido es obligatorio.");
-        $("#txtApellido").trigger("focus");
-        return false;
-    }
-    if ($("#txtCorreo").val().trim() === "") {
-        alert("El correo electrónico es obligatorio.");
-        $("#txtCorreo").trigger("focus");
-        return false;
-    }
-    return true;
-}
+});
+

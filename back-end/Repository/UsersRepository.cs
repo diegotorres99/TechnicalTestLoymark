@@ -232,10 +232,10 @@ namespace back_end.Repository
                 new CountryDto { Code = "NG", Name = "Nigeria" },
                 new CountryDto { Code = "AR", Name = "Argentina" },
                 new CountryDto { Code = "EG", Name = "Egypt" },
-                new CountryDto { Code = "CR", Name = "Costa Rica" } // Correct ISO 3166-1 code for Costa Rica
+                new CountryDto { Code = "CRI", Name = "Costa Rica" } 
             };
 
-            return countries;
+            return await Task.FromResult<IEnumerable<CountryDto>>(countries);
         }
     }
 }

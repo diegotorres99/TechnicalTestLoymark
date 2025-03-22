@@ -39,18 +39,19 @@ namespace back_end.Controllers
             return CreatedAtAction(nameof(GetUser), new { id = createdUser.Id }, createdUser);
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateUser(int id, [FromBody] UserDto userDto)
-        {
-            if (userDto == null || id != userDto.Id)
-                return BadRequest("User data is invalid or ID mismatch.");
 
-            var existingUser = await _usersRepository.GetById(id);
+        [HttpPut("UpdateUser")]
+        public async Task<ActionResult> UpdateUser([FromBody] UserDto userDto)
+        {
+            if (userDto == null || userDto.Id <= 0)
+                return BadRequest("User data is invalid.");
+
+            var existingUser = await _usersRepository.GetById(userDto.Id);
             if (existingUser == null)
-                return NotFound($"User with ID {id} not found.");
+                return NotFound($"User with ID {userDto.Id} not found.");
 
             await _usersRepository.Update(userDto);
-            return NoContent(); 
+            return Ok();
         }
 
         [HttpDelete("delete/{id}")]

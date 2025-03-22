@@ -77,6 +77,22 @@ namespace front_end.Controllers
             }
         }
 
+        [HttpPut]
+        public async Task<IActionResult> UpdateUser([FromBody] UserDto userDto)
+        {
+            var jsonContent = new StringContent(JsonSerializer.Serialize(userDto), Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PutAsync(_apiUrl + "user/UpdateUser", jsonContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Ok();
+            }
+            else
+            {
+                return View("Error");
+            }
+        }
     }
 }
 

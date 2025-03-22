@@ -3,7 +3,6 @@
 $(function () {
     getActivities();
 });
-
 function getActivities() {
     fetch(uri + 'getActivities')
         .then(response => response.ok ? response.json() : Promise.reject(response))
@@ -22,7 +21,6 @@ function getActivities() {
             console.error("Error fetching data:", error);
         });
 }
-
 function formatDate(dateString) {
     const date = new Date(dateString);
     return date.toLocaleString(); 
