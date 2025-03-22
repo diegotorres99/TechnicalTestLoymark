@@ -113,3 +113,4 @@ C:\Users\luis_\source\repos\TechnicalTestLoymark\TechnicalTestLoymark\obj\Debug\
 C:\Users\luis_\source\repos\TechnicalTestLoymark\TechnicalTestLoymark\obj\Debug\net8.0\front_end.pdb
 C:\Users\luis_\source\repos\TechnicalTestLoymark\TechnicalTestLoymark\obj\Debug\net8.0\front_end.genruntimeconfig.cache
 C:\Users\luis_\source\repos\TechnicalTestLoymark\TechnicalTestLoymark\obj\Debug\net8.0\ref\front_end.dll
+C:\Users\luis_\source\repos\TechnicalTestLoymark\TechnicalTestLoymark\obj\Debug\net8.0\front_end.sourcelink.json

@@ -10,35 +10,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "back_end.Controllers.UsersController",
-    "Method": "GetUsers",
-    "RelativePath": "api/Users",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "back_end.Controllers.UsersController",
-    "Method": "CreateUser",
-    "RelativePath": "api/Users",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userDto",
-        "Type": "back_end.DTOs.UserDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "back_end.Controllers.UsersController",
+    "ContainingType": "back_end.Controllers.UserController",
     "Method": "GetUser",
-    "RelativePath": "api/Users/{id}",
+    "RelativePath": "api/User/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -52,9 +26,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "back_end.Controllers.UsersController",
+    "ContainingType": "back_end.Controllers.UserController",
     "Method": "UpdateUser",
-    "RelativePath": "api/Users/{id}",
+    "RelativePath": "api/User/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -73,9 +47,45 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "back_end.Controllers.UsersController",
+    "ContainingType": "back_end.Controllers.UserController",
+    "Method": "GetCountries",
+    "RelativePath": "api/User/countries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[back_end.DTOs.CountryDto, back_end, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "back_end.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "api/User/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "back_end.DTOs.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "back_end.Controllers.UserController",
     "Method": "DeleteUser",
-    "RelativePath": "api/Users/{id}",
+    "RelativePath": "api/User/delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -86,6 +96,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "back_end.Controllers.UserController",
+    "Method": "GetUsers",
+    "RelativePath": "api/User/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

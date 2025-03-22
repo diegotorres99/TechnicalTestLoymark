@@ -12,28 +12,20 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TechnicalTestLoymark</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Registro de Usuarios</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Activity" asp-action="Activity">Privacy</a>
-                        </li>
-                        <!-- Add Dropdown Example -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Opciones
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" asp-controller="Users" asp-action="Users">Usuarios</a></li>
-                                <li><a class="dropdown-item" asp-controller="Activity" asp-action="Activity">Activities</a></li>
-
+                                <li><a class="dropdown-item" asp-controller="User" asp-action="User">Usuarios</a></li>
+                                <li><a class="dropdown-item" asp-controller="Activity" asp-action="Activity">Actividad de Usuarios</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -49,10 +41,11 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - TechnicalTestLoymark - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container" style="text-align: center;">
+            &copy; 2025 - Prueba técnica Loymark <a asp-area="" asp-controller="Home" asp-action=""></a>
         </div>
     </footer>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

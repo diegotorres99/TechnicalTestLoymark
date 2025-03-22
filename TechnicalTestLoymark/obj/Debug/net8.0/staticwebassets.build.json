@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cOIbgdL+SdyuX3ZlEwOoFthzltZJckUrEu6oKG172Ow=",
+  "Hash": "Z7631OrqkP0lf94DvZKZGF4Wj5fn5njpFlfGSqx7aPA=",
   "Source": "front_end",
   "BasePath": "_content/front_end",
   "Mode": "Default",
@@ -113,12 +113,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\Activities.js",
+      "Identity": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\Activity.js",
       "SourceId": "front_end",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\",
       "BasePath": "_content/front_end",
-      "RelativePath": "js/Activities#[.{fingerprint}]?.js",
+      "RelativePath": "js/Activity#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -127,11 +127,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9ujkhbw6dz",
-      "Integrity": "jyHIZcz+EgaVxltETSxr2+/kzBgYv8md8eGsOLrCbkM=",
+      "Fingerprint": "jhbb8mo0f3",
+      "Integrity": "GVFcaAeDEZHr9lhFRS+6EKC3y85GNBXiHDyEjMpmeMU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Activities.js"
+      "OriginalItemSpec": "wwwroot\\js\\Activity.js"
     },
     {
       "Identity": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\site.js",
@@ -153,6 +153,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\User.js",
+      "SourceId": "front_end",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\",
+      "BasePath": "_content/front_end",
+      "RelativePath": "js/User#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6e8c6lihxs",
+      "Integrity": "grBLAdizFl23KREnkLzFGkpwejAtP5E8bK9dgZFiVDo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\User.js"
     },
     {
       "Identity": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -1682,8 +1703,8 @@
       ]
     },
     {
-      "Route": "js/Activities.9ujkhbw6dz.js",
-      "AssetFile": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\Activities.js",
+      "Route": "js/Activity.jhbb8mo0f3.js",
+      "AssetFile": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\Activity.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1692,7 +1713,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "896"
+          "Value": "875"
         },
         {
           "Name": "Content-Type",
@@ -1700,11 +1721,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jyHIZcz+EgaVxltETSxr2+/kzBgYv8md8eGsOLrCbkM=\""
+          "Value": "\"GVFcaAeDEZHr9lhFRS+6EKC3y85GNBXiHDyEjMpmeMU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 21 Mar 2025 03:47:32 GMT"
+          "Value": "Fri, 21 Mar 2025 18:02:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1714,21 +1735,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9ujkhbw6dz"
+          "Value": "jhbb8mo0f3"
         },
         {
           "Name": "label",
-          "Value": "js/Activities.js"
+          "Value": "js/Activity.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jyHIZcz+EgaVxltETSxr2+/kzBgYv8md8eGsOLrCbkM="
+          "Value": "sha256-GVFcaAeDEZHr9lhFRS+6EKC3y85GNBXiHDyEjMpmeMU="
         }
       ]
     },
     {
-      "Route": "js/Activities.js",
-      "AssetFile": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\Activities.js",
+      "Route": "js/Activity.js",
+      "AssetFile": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\Activity.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1737,7 +1758,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "896"
+          "Value": "875"
         },
         {
           "Name": "Content-Type",
@@ -1745,11 +1766,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jyHIZcz+EgaVxltETSxr2+/kzBgYv8md8eGsOLrCbkM=\""
+          "Value": "\"GVFcaAeDEZHr9lhFRS+6EKC3y85GNBXiHDyEjMpmeMU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 21 Mar 2025 03:47:32 GMT"
+          "Value": "Fri, 21 Mar 2025 18:02:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1759,7 +1780,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jyHIZcz+EgaVxltETSxr2+/kzBgYv8md8eGsOLrCbkM="
+          "Value": "sha256-GVFcaAeDEZHr9lhFRS+6EKC3y85GNBXiHDyEjMpmeMU="
         }
       ]
     },
@@ -1842,6 +1863,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+        }
+      ]
+    },
+    {
+      "Route": "js/User.6e8c6lihxs.js",
+      "AssetFile": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\User.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7471"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"grBLAdizFl23KREnkLzFGkpwejAtP5E8bK9dgZFiVDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 05:23:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6e8c6lihxs"
+        },
+        {
+          "Name": "label",
+          "Value": "js/User.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-grBLAdizFl23KREnkLzFGkpwejAtP5E8bK9dgZFiVDo="
+        }
+      ]
+    },
+    {
+      "Route": "js/User.js",
+      "AssetFile": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\User.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7471"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"grBLAdizFl23KREnkLzFGkpwejAtP5E8bK9dgZFiVDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 05:23:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-grBLAdizFl23KREnkLzFGkpwejAtP5E8bK9dgZFiVDo="
         }
       ]
     },

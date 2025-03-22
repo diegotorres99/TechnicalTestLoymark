@@ -4,15 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace back_end.Controllers
 {
-    public class UsersController : BaseApiController
+    public class UserController : BaseApiController
     {
         private readonly IUsersRepository _usersRepository;
-        public UsersController(IUsersRepository usersRepository)
+        public UserController(IUsersRepository usersRepository)
         {
             _usersRepository = usersRepository;
         }
 
-        [HttpGet]
+        [HttpGet("users")]
         public async Task<ActionResult> GetUsers()
         {
             var resp = await _usersRepository.GetAll();
@@ -29,7 +29,7 @@ namespace back_end.Controllers
             return Ok(user);
         }
 
-        [HttpPost]
+        [HttpPost("CreateUser")]
         public async Task<ActionResult> CreateUser([FromBody] UserDto userDto)
         {
             if (userDto == null)
@@ -53,7 +53,7 @@ namespace back_end.Controllers
             return NoContent(); 
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<ActionResult> DeleteUser(int id)
         {
             var existingUser = await _usersRepository.GetById(id);
@@ -62,6 +62,16 @@ namespace back_end.Controllers
 
             await _usersRepository.Delete(id);
             return NoContent(); 
+        }
+
+        [HttpGet("countries")]
+        public async Task<ActionResult<IEnumerable<CountryDto>>> GetCountries()
+        {
+            var countries = await _usersRepository.GetCountries();
+            if (countries == null || !countries.Any())
+                return NotFound("No countries found.");
+
+            return Ok(countries);
         }
     }
 }

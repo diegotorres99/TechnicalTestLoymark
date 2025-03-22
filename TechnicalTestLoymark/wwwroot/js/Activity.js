@@ -1,17 +1,15 @@
-﻿const uri = "/Activity/getActivities";
+﻿const uri = "/Activity/";
 
-$(document).ready(() => {
+$(function () {
     getActivities();
 });
-//$(function () {
-//    getActivities();
-//});
+
 function getActivities() {
-    fetch(uri)
+    fetch(uri + 'getActivities')
         .then(response => response.ok ? response.json() : Promise.reject(response))
         .then(dataJson => {
-            $("#tbList tbody").empty(); 
-
+            $("#tbList tbody").empty();
+            console.log(dataJson)
             dataJson.forEach(item => {
                 $("#tbList tbody").append($("<tr>").append(
                     $("<td>").text(formatDate(item.activityDate)), 

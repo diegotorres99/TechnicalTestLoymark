@@ -1,7 +1,8 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\js\Activities.js
+wwwroot\js\Activity.js
 wwwroot\js\site.js
+wwwroot\js\User.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

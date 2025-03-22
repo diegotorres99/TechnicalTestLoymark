@@ -61,7 +61,9 @@ namespace back_end.Repository
                 {
                     await connection.OpenAsync();
 
-                    const string query = "SELECT Id, Name FROM Users";
+                    const string query = 
+                        "SELECT id, nombre, apellido, correo_electronico, fecha_nacimiento, telefono, pais_residencia, pregunta_contacto " +
+                        "FROM usuarios;";
 
                     using (var command = new SqliteCommand(query, connection))
                     {
@@ -71,8 +73,16 @@ namespace back_end.Repository
                             {
                                 users.Add(new UserDto
                                 {
-                                    Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                                    Name = reader.GetString(reader.GetOrdinal("Name")),
+                                    Id = reader.GetInt32(reader.GetOrdinal("id")),  
+                                    Name = reader.GetString(reader.GetOrdinal("nombre")),  
+                                    LastName = reader.GetString(reader.GetOrdinal("apellido")),  
+                                    Email = reader.GetString(reader.GetOrdinal("correo_electronico")),  
+                                    BirthDate = reader.GetDateTime(reader.GetOrdinal("fecha_nacimiento")),  
+                                    Phone = reader.GetString(reader.GetOrdinal("telefono")),  
+                                    Country = reader.GetString(reader.GetOrdinal("pais_residencia")),  
+                                    ContactQuestion = reader.IsDBNull(reader.GetOrdinal("pregunta_contacto"))
+                                        ? false  
+                                        : reader.GetBoolean(reader.GetOrdinal("pregunta_contacto")),
                                 });
                             }
                         }
@@ -201,39 +211,29 @@ namespace back_end.Repository
 
         public async Task<IEnumerable<CountryDto>> GetCountries()
         {
-            var countries = new List<CountryDto>();
-
-            try
+            var countries = new List<CountryDto>
             {
-                var response = await _httpClient.GetAsync("https://restcountries.com/v3.1/all");
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var json = await response.Content.ReadAsStringAsync();
-
-                    var countryData = JsonSerializer.Deserialize<List<CountryApiResponse>>(json, new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    }) ?? new List<CountryApiResponse>(); 
-
-                    if (countryData.Count > 0) 
-                    {
-                        countries = countryData
-                            .Where(c => !string.IsNullOrEmpty(c.cca3) && c.name?.common != null)
-                            .Select(c => new CountryDto
-                            {
-                                Code = c.cca3 ?? "N/A", 
-                                Name = c.name?.common ?? "Unknown"  
-                            })
-                            .OrderBy(c => c.Name)
-                            .ToList();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error fetching country list: {ex.Message}");
-            }
+                new CountryDto { Code = "US", Name = "United States" },
+                new CountryDto { Code = "CA", Name = "Canada" },
+                new CountryDto { Code = "GB", Name = "United Kingdom" },
+                new CountryDto { Code = "DE", Name = "Germany" },
+                new CountryDto { Code = "FR", Name = "France" },
+                new CountryDto { Code = "IT", Name = "Italy" },
+                new CountryDto { Code = "ES", Name = "Spain" },
+                new CountryDto { Code = "MX", Name = "Mexico" },
+                new CountryDto { Code = "BR", Name = "Brazil" },
+                new CountryDto { Code = "IN", Name = "India" },
+                new CountryDto { Code = "CN", Name = "China" },
+                new CountryDto { Code = "JP", Name = "Japan" },
+                new CountryDto { Code = "AU", Name = "Australia" },
+                new CountryDto { Code = "RU", Name = "Russia" },
+                new CountryDto { Code = "KR", Name = "South Korea" },
+                new CountryDto { Code = "ZA", Name = "South Africa" },
+                new CountryDto { Code = "NG", Name = "Nigeria" },
+                new CountryDto { Code = "AR", Name = "Argentina" },
+                new CountryDto { Code = "EG", Name = "Egypt" },
+                new CountryDto { Code = "CR", Name = "Costa Rica" } // Correct ISO 3166-1 code for Costa Rica
+            };
 
             return countries;
         }

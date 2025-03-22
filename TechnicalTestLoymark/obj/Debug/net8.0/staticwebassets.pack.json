@@ -13,8 +13,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\Activities.js",
-      "PackagePath": "staticwebassets\\js\\Activities.js"
+      "Id": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\Activity.js",
+      "PackagePath": "staticwebassets\\js\\Activity.js"
+    },
+    {
+      "Id": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\User.js",
+      "PackagePath": "staticwebassets\\js\\User.js"
     },
     {
       "Id": "C:\\Users\\luis_\\source\\repos\\TechnicalTestLoymark\\TechnicalTestLoymark\\wwwroot\\js\\site.js",

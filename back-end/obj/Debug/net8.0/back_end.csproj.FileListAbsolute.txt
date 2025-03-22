@@ -101,3 +101,4 @@ C:\Users\luis_\source\repos\TechnicalTestLoymark\back-end\obj\Debug\net8.0\refin
 C:\Users\luis_\source\repos\TechnicalTestLoymark\back-end\obj\Debug\net8.0\back_end.pdb
 C:\Users\luis_\source\repos\TechnicalTestLoymark\back-end\obj\Debug\net8.0\back_end.genruntimeconfig.cache
 C:\Users\luis_\source\repos\TechnicalTestLoymark\back-end\obj\Debug\net8.0\ref\back_end.dll
+C:\Users\luis_\source\repos\TechnicalTestLoymark\back-end\obj\Debug\net8.0\back_end.sourcelink.json
