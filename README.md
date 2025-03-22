@@ -7,5 +7,7 @@ El front-end se ha desarrollado utilizando .NET MVC, mientras que el back-end es
 ## Registro de Usuarios
 ![Usuarios](https://github.com/user-attachments/assets/202d9a5c-590d-412c-9a52-93a068053eb2)
 
+![Usuarios1](https://github.com/user-attachments/assets/5213be8e-3ebe-4f4e-be0b-cb5a1391ec77)
+
 ## Actividad de Usuarios
 ![Actividad](https://github.com/user-attachments/assets/bfcace25-9da9-4aef-9671-b6cdd679adc8)
